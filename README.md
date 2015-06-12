@@ -5,7 +5,7 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-officehours/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-officehours)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-officehours/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-officehours)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-officehours.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-officehours)
-[ ![Codeship Status for sensu-plugins/sensu-plugins-officehours](https://codeship.com/projects/0e752030-ea2d-0132-4ff6-4602e60b2e9f/status?branch=master)](https://codeship.com/projects/83059)
+[![Codeship Status for sensu-plugins/sensu-plugins-officehours](https://codeship.com/projects/0e752030-ea2d-0132-4ff6-4602e60b2e9f/status?branch=master)](https://codeship.com/projects/83059)
 ## Functionality
 
 ## Files
