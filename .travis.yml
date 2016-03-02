@@ -1,19 +1,31 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+deploy:
+  provider: rubygems
+  api_key:
+    secure: J5ewl++3MiwV5JjwiW2z9rZG1Ypn6UwFMq+7uhbjxVzXD8KHhC1u1jW+lGZ0MkDARSetGj/WDQZz1OEp0xdF2Udfgr24MwOfTbdRpu4I4Xi30B8FXtFlDgV4RUIlj3xTAUVzdpuYIIkkDNaV4dj5KKWIFAuz/qemXKuhcSkCQEM=
+  gem: sensu-plugins-officehours
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-officehours
