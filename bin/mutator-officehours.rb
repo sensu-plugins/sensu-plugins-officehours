@@ -34,7 +34,8 @@ t = Time.now
 # Verify if we're opened for business
 if t.wday.between?(1, 5)
   if t.between?(Time.parse('9:00'), Time.parse('17:00'))
-    event.merge!(mutated: true, office_hours: true)
+    event[:mutated] = true
+    event[:office_hours] = true
   end
 end
 

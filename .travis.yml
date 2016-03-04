@@ -16,16 +16,20 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
+- gem build sensu-plugins-officehours.gemspec
+- gem install sensu-plugins-officehours-*.gem
+
 deploy:
   provider: rubygems
   api_key:
-    secure: J5ewl++3MiwV5JjwiW2z9rZG1Ypn6UwFMq+7uhbjxVzXD8KHhC1u1jW+lGZ0MkDARSetGj/WDQZz1OEp0xdF2Udfgr24MwOfTbdRpu4I4Xi30B8FXtFlDgV4RUIlj3xTAUVzdpuYIIkkDNaV4dj5KKWIFAuz/qemXKuhcSkCQEM=
+    secure: flJCGfTV6UMQqOZu27UYVDrsy6FuVVthgQEBQWncP8GBzRLCGM/i6dhnrY2i9cikxHoHEMv9EY3Y1SRJvlyi5OWgb61OSOmOjUXELq/RZdDWu0psFZ+bAaZ/V4UlCj026veRBgsoRDktv8IM5osQjsxa3qTzrfvW15H0P7xjVxU=
   gem: sensu-plugins-officehours
   on:
     tags: true
-    all_branches: true
+    repo: sensu-plugins/sensu-plugins-officehours
+      all_branches: true
     rvm: 1.9.3
     rvm: 2.0
     rvm: 2.1
     rvm: 2.2
-    repo: sensu-plugins/sensu-plugins-officehours
+
